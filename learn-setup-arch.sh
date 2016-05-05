@@ -7,7 +7,7 @@ set -e  # Exit on errors
 printf " Starting setup...\n"
 
 printf " Installing prerequisits...\n"
-pacman -S postgresql nodejs phantomjs chromium redis jdk8-openjdk icedtea-web java-openjfx
+sudo pacman -S git postgresql nodejs npm phantomjs chromium redis jdk8-openjdk icedtea-web java-openjfx
 
 printf " downloading from AUR...\n"
 wget -N -P ~/Downloads/ https://aur.archlinux.org/cgit/aur.git/snapshot/rbenv.tar.gz

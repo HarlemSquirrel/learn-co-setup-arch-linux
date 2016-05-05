@@ -1,6 +1,7 @@
 #!/bin/bash
 
-### Setup an environment for Learn.co on Arch Linux by HarlemSquirrel
+### Setup a dev environment for Learn.co on Arch Linux by HarlemSquirrel
+# https://github.com/HarlemSquirrel/learn-co-setup-arch-linux
 
 set -e  # Exit on errors
 

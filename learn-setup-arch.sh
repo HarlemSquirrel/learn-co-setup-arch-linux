@@ -8,7 +8,7 @@ set -e  # Exit on errors
 printf " Starting setup...\n"
 
 printf " Installing prerequisits...\n"
-sudo pacman -S git postgresql nodejs npm phantomjs chromium redis jdk8-openjdk icedtea-web java-openjfx
+sudo pacman -S git postgresql nodejs phantomjs chromium redis jdk8-openjdk icedtea-web java-openjfx
 
 
 #
@@ -51,6 +51,12 @@ printf " installing ruby 2.3.1 and setting as default...\n"
 rvm install 2.3.1 --default
 
 
+### -- Install npm to use as local user without sudo
+### https://github.com/npm/npm
+printf " installing npm...\n"
+curl -L https://www.npmjs.com/install.sh | sh
+
+
 printf " setting rspec to run in color...\n"
 echo "--color" > ~/.rspec
 
@@ -62,7 +68,7 @@ sudo mkdir -p "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 sudo ln -s /usr/bin/chromium "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
 printf " installing some npm stuff...\n"
-sudo npm install -g karma-cli
-sudo npm install -g protractor
+npm install -g karma-cli
+npm install -g protractor
 
 printf " Done! You will probably want the Atom editor from https://aur.archlinux.org/packages/atom-editor/ \n"

@@ -70,5 +70,6 @@ sudo ln -s /usr/bin/chromium "/Applications/Google Chrome.app/Contents/MacOS/Goo
 printf " installing some npm stuff...\n"
 npm install -g karma-cli
 npm install -g protractor
+npm install -g mocha
 
 printf " Done! You will probably want the Atom editor from https://aur.archlinux.org/packages/atom-editor/ \n"
